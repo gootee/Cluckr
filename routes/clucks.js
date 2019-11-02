@@ -15,20 +15,17 @@ router.post("/new", (req, res) => {
     username: res.locals.username
   };
 
-  // save a cluck to database
   knex("clucks")
     .insert(cluckParams)
     .returning("*")
     .then((data) => {
-      // res.send(data);
       res.redirect('/clucks/');
-    });
+  });
 });
 
 router.get("/", (req, res) => {
   knex("clucks")
     .select("*")
-    // data is what is being returned from the knex/sql query
     .then((data) => {
       data.sort((a, b) => (a.created_at > b.created_at) ? -1 : 1)
 
