@@ -1,0 +1,37 @@
+<%- include("../partials/header") %>
+
+<ul>
+  <% for (let cluck of clucks) { %>
+    <li>
+      <div class="cluck">
+        <div class="chickenNav">
+          <img src=/images/chicken.jpeg alt="Chicken">
+        </div>
+        <div class="cluckSpecifics">
+          <div class="cluckheading">
+            <%= cluck.username + "   -   " + cluck.created_at%>
+           
+          </div>
+          <%= cluck.content %>          
+          <% if (cluck.image_url && cluck.image_url.length > 0) { %>
+            <div class="cluckImage">
+              <img src=<%= cluck.image_url %> alt="Cluck image">
+            </div>                     
+          <% } %>               
+        </div>
+      </div>
+    </li>
+  <% } %>
+</ul>
+
+  <!-- <div>
+    <form action="/clucks/new" method="POST" class="inputForm">
+      <label for="content" class="label">Content</label>
+      <input type="text" name="content" class="input"  placeholder="Whatchoo cluckin' 'bout?'"></input>
+      <label for="imageUrl" class="label">Image URL</label>
+      <input type="text" name="imageUrl" class="input"  placeholder="https://i.imgur.com/qM6AGGG99"></input>
+      <input type="submit" value="Cluck!" class="btn btn-primary submitButton">
+    </form>
+  </div> -->
+    
+<%- include("../partials/footer") %>

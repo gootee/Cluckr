@@ -1,0 +1,76 @@
+<nav class="navbar">
+  <div class="navHeader">
+    <a href="/clucks/">
+      <div class="chickenNav">
+        <img src=/images/chicken.jpeg alt="Chicken">
+      </div>      
+    </a>
+
+    
+    <!-- <img src="./chicken2.jpeg" alt="Chicken2">
+    <img src="https://icon-library.net/icon/chicken-icon-png-2.html" alt="Chicken3">
+    
+    <div class="item a-image">
+      <img src="/temp_assets/student.svg" width="480" height="480" alt="Student Illustration">
+    </div> -->
+
+
+    <!-- <img src="http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/256/22266-chicken-icon.png> -->
+    <!-- <h1>Cluckr</h1> -->
+    <!-- <div class="links">
+      <a href="/">Home</a>
+      |
+      <a href="/cohorts">Cohorts</a>
+      |
+      <a href="/cohorts/new">New Cohort</a>      
+    </div> -->
+
+    <% if (username) { %> 
+      <!-- <a href="/articles/new">New Articles</a> -->
+      <div class="signedInNav">
+        <form action="/clucks/new" method="GET">
+          <!-- <label for="username">Sign in!</label>
+          <input type="text" name="username"></input> -->
+          <input type="submit" value="Cluck!" class="btn btn-primary">
+        </form>
+
+        <div class="usernameDisplay">
+          <%= username %>
+        </div>
+
+        <form action="/sign_out" method="POST">
+          <input type="submit" value="Sign Out" class="btn btn-primary">
+        </form>
+      </div>
+ 
+    <% } else { %>
+
+
+      <!-- <form action="/sign_in" method="POST"> -->
+      <form action="/sign_in_page" method="GET">
+        <!-- <label for="username">Sign in!</label>
+        <input type="text" name="username"></input> -->
+        <input type="submit" value="Sign In" class="btn btn-primary">
+      </form>
+    <% } %>
+
+
+
+
+
+    <!-- < % if (username) { % > 
+      <a href="/articles/new">New Articles</a>
+      < %= username % >
+      <form action="/sign_out" method="POST">
+        <input type="submit" value="Sign Out" class="btn btn-danger">
+      </form>
+    < % } else { % >
+      <form action="/sign_in" method="POST">
+        <label for="username">Sign in!</label>
+        <input type="text" name="username"></input>
+        <input type="submit" value="Log In" class="btn btn-primary">
+      </form>
+    < % } % > -->
+
+  </div>
+</nav>

@@ -1,0 +1,13 @@
+<%- include("../partials/header") %>
+
+  <div>
+    <form action="/clucks/new" method="POST" class="inputForm">
+      <label for="content" class="label">Content</label>
+      <input type="text" name="content" class="input"  placeholder="Whatchoo cluckin' 'bout?'"></input>
+      <label for="imageUrl" class="label">Image URL</label>
+      <input type="text" name="imageUrl" class="input"  placeholder="https://i.imgur.com/qM6AGGG99"></input>
+      <input type="submit" value="Cluck!" class="btn btn-primary submitButton">
+    </form>
+  </div>
+    
+<%- include("../partials/footer") %>
